@@ -49,7 +49,7 @@
   </v-container>
 </template>
 <script>
-import { setTimeout } from 'timers';
+import { setTimeout } from "timers";
 export default {
   name: "Login",
   // props:[
@@ -68,16 +68,15 @@ export default {
   },
   methods: {
     userSignIn: function() {
-        const self = this
+      const self = this;
       if (this.input.email != "" && this.input.password != "") {
         if (this.input.email == "admin" && this.input.password == "admin") {
           this.logginSuccess = true;
           this.logginError = false;
 
-          setTimeout(()=>{
-              self.$router.replace({name : "Home"})
-          },3000)
-
+          setTimeout(() => {
+            self.$router.replace({ name: "Home" });
+          }, 3000);
         } else {
           this.logginSuccess = false;
           this.logginError = true;

@@ -7,8 +7,6 @@ import store from "./store";
 
 require("./styles/style.css");
 
-
-
 Vue.config.productionTip = false;
 
 new Vue({
