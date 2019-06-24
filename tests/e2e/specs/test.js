@@ -8,10 +8,10 @@ module.exports = {
       .waitForElementVisible("#app", 5000)
       .assert.elementPresent("#email")
       .assert.elementPresent("#password")
-      .setValue("#email","admin")
-      .setValue("#password","admin")
+      .setValue("#email", "admin")
+      .setValue("#password", "admin")
       .click("#loginBtn")
       .waitForElementVisible("#successLogin", 5000)
       .end();
-  } 
+  }
 };

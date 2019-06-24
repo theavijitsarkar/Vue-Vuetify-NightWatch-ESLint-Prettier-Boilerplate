@@ -17,4 +17,3 @@ exports.assertion = function elementCount(selector, count) {
   }
   this.command = cb => this.api.execute(evaluator, [selector], cb);
 };
-
