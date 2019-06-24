@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="1"
+            failures="0"
+            tests="1">
+
+  <testsuite name="test"
+    errors="1" failures="0" hostname="" id="" package="test" skipped="0"
+    tests="1" time="0.006000" timestamp="Mon, 24 Jun 2019 08:03:58 GMT">
+  
+    <testcase name="login test" classname="test" time="0.006000" assertions="0">
+    </testcase>
+  
+
+  
+    <system-err>
+        Error while running [Test / login test]:
+
+  TypeError: browser.url(...).waitForElementVisible(...).assert.elementPresent(...).assert.elementPresent(...).assert.setValue is not a function
+    at Object.login test (/Applications/MAMP/htdocs/vueboilerplate/tests/e2e/specs/test.js:11:15)
+    at Module.call (/Applications/MAMP/htdocs/vueboilerplate/node_modules/nightwatch/lib/runner/module.js:62:34)
+    at /Applications/MAMP/htdocs/vueboilerplate/node_modules/nightwatch/lib/runner/testcase.js:70:29
+    at _fulfilled (/Applications/MAMP/htdocs/vueboilerplate/node_modules/q/q.js:834:54)
+    at /Applications/MAMP/htdocs/vueboilerplate/node_modules/q/q.js:863:30
+    at Promise.promise.promiseDispatch (/Applications/MAMP/htdocs/vueboilerplate/node_modules/q/q.js:796:13)
+    at /Applications/MAMP/htdocs/vueboilerplate/node_modules/q/q.js:556:49
+    at runSingle (/Applications/MAMP/htdocs/vueboilerplate/node_modules/q/q.js:137:13)
+    at flush (/Applications/MAMP/htdocs/vueboilerplate/node_modules/q/q.js:125:13)
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+    </system-err>
+  
+
+  
+  </testsuite>
+</testsuites>
