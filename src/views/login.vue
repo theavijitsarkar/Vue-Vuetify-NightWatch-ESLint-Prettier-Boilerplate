@@ -49,9 +49,9 @@
   </v-container>
 </template>
 <script>
-import { setTimeout } from "timers";
+import {setTimeout} from 'timers';
 export default {
-  name: "Login",
+  name: 'Login',
   // props:[
   //     "emailCheck",
   //     "passwordCheck"
@@ -59,23 +59,25 @@ export default {
   data() {
     return {
       input: {
-        email: "",
-        password: ""
+        email: '',
+        password: '',
       },
       logginSuccess: false,
-      logginError: false
+      logginError: false,
     };
   },
   methods: {
     userSignIn: function() {
       const self = this;
-      if (this.input.email != "" && this.input.password != "") {
-        if (this.input.email == "admin" && this.input.password == "admin") {
+      if (this.input.email != '' && this.input.password != '') {
+        if (this.input.email == 'admin' && this.input.password == 'admin') {
           this.logginSuccess = true;
           this.logginError = false;
 
           setTimeout(() => {
-            self.$router.replace({ name: "Home" });
+            self.$router.replace({
+              name: 'Home',
+            });
           }, 3000);
         } else {
           this.logginSuccess = false;
@@ -84,10 +86,10 @@ export default {
           console.log("Sorry could'nt sign in");
         }
       } else {
-        console.log("A username and password must be present");
+        console.log('A username and password must be present');
       }
-    }
-  }
+    },
+  },
 };
 </script>
 

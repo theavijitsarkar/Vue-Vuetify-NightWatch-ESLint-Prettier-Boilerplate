@@ -1,11 +1,6 @@
 <template>
   <v-app>
-    <v-toolbar
-      app
-      style="background-color: #225C9B"
-      dark
-      v-if="showToolbar"
-    >
+    <v-toolbar app style="background-color: #225C9B" dark v-if="showToolbar">
       <v-toolbar-side-icon
         @click.stop="sideNav = !sideNav"
         style="color: #fff"
@@ -20,7 +15,11 @@
           transition="scale-transition"
           :nudge-bottom="55"
         >
-          <template v-slot:activator="{ on }">
+          <template
+            v-slot:activator="{
+              on,
+            }"
+          >
             <v-btn flat fab v-on="on" style="color: #fff">
               <v-icon>face</v-icon>
             </v-btn>
@@ -68,28 +67,44 @@
           <v-list-tile-title class="cb_subtitle">Users</v-list-tile-title>
         </v-list-tile>
 
-        <v-list-tile :to="{ name: 'Inventory' }">
+        <v-list-tile
+          :to="{
+            name: 'Inventory',
+          }"
+        >
           <v-list-tile-action>
             <v-icon>build</v-icon>
           </v-list-tile-action>
           <v-list-tile-title class="cb_subtitle">Inventory</v-list-tile-title>
         </v-list-tile>
 
-        <v-list-tile :to="{ name: 'Monitor' }">
+        <v-list-tile
+          :to="{
+            name: 'Monitor',
+          }"
+        >
           <v-list-tile-action>
             <v-icon>settings</v-icon>
           </v-list-tile-action>
           <v-list-tile-title class="cb_subtitle">Monitor</v-list-tile-title>
         </v-list-tile>
 
-        <v-list-tile :to="{ name: 'Location' }">
+        <v-list-tile
+          :to="{
+            name: 'Location',
+          }"
+        >
           <v-list-tile-action>
             <v-icon>person</v-icon>
           </v-list-tile-action>
           <v-list-tile-title class="cb_subtitle">Machines</v-list-tile-title>
         </v-list-tile>
 
-        <v-list-tile :to="{ name: 'Resource' }">
+        <v-list-tile
+          :to="{
+            name: 'Resource',
+          }"
+        >
           <v-list-tile-action>
             <v-icon>person</v-icon>
           </v-list-tile-action>
@@ -110,10 +125,10 @@
 
 <script>
 export default {
-  name: "App",
+  name: 'App',
   data() {
     return {
-      sideNav: false
+      sideNav: false,
 
       //
     };
@@ -122,15 +137,17 @@ export default {
     showToolbar() {
       console.log(this.$router.currentRoute.name);
 
-      if (this.$router.currentRoute.name != "Login") return true;
+      if (this.$router.currentRoute.name != 'Login') return true;
       else return false;
-    }
+    },
   },
   methods: {
     logout() {
-      this.$router.replace({ name: "Login" });
-    }
-  }
+      this.$router.replace({
+        name: 'Login',
+      });
+    },
+  },
 };
 </script>
 
